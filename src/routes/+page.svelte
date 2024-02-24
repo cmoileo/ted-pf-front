@@ -4,11 +4,14 @@
 
 <script lang="ts">
     import Cell_1 from "$lib/homeCells/Cell_1.svelte";
+    import Cell_2 from "$lib/homeCells/Cell_2.svelte";
     import { type HomeDataType } from "$lib/types/homeData.type.js";
     export let data: HomeDataType;
 </script>
 
 <div>
-    <h1 class="grey-50 h1">Home</h1>
+    <p class="p-s grey-50">Bienvenue sur le portfolio de</p>
+    <h1 class="grey-50 h1">Théo Houyoux</h1>
     <Cell_1 {data}/>
+    <Cell_2 {data}/>
 </div>
