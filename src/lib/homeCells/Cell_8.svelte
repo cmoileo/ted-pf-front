@@ -6,7 +6,6 @@
     const spotify = data.spotify
     const musiques = spotify.musiques
     const lien_playlist = spotify.lien_playlist
-    console.log(data)
 </script>
 
 <div class="cell-8">

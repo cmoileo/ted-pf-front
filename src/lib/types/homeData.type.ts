@@ -2,6 +2,12 @@ interface MusiqueType {
     id: number;
     id_musique: string
 }
+interface ProjetType {
+    id: number;
+    Titre: string;
+    Label: string;
+    Mockup: ImgType;
+}
 interface ImgType {
     data: {
         id: number;
@@ -65,7 +71,7 @@ export interface HomeDataType {
     }[];
     Photo_bloc_1: ImgType;
     Photo_bloc_2: ImgType
-    Photo_bloc_3: ImgType
+    Photo_bloc_3: ImgType[]
     Photo_bloc_4: ImgType
     Images_films: {
         data: ImgType[]
@@ -80,4 +86,5 @@ export interface HomeDataType {
         lien_playlist: string;
         musiques: MusiqueType[];
     }
+    projet: ProjetType[];
 }
