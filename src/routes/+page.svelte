@@ -1,10 +1,9 @@
-<script>
-    export let data;
-    let test = "csr !"
-    function handleClick() {
-        test = 'dynamic !'
-    }
-</script>
+<style lang="scss">
+  @import "../style/main.scss";
+</style>
 
-<h1>{data.data.data.attributes.Label_projets}</h1>
-<button on:click={handleClick}>Hello world {test}</button>
+<div>
+    <h1 class="grey-50 h1">
+        Home
+    </h1>
+</div>

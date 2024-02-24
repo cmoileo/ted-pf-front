@@ -1,0 +1,169 @@
+// ========================================================================== \\
+// ================================FONTS===================================== \\
+// ========================================================================== \\
+
+@font-face {
+    font-family: 'Main bold';
+    src: url('static/RedHatDisplay-Bold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Main regular';
+    src: url('static/RedHatDisplay-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.h1 {
+    font-family: 'Main bold', sans-serif;
+
+    @include min(desktop) {
+        font-size: ptr(48, desktop);
+    }
+}
+
+.h2 {
+    font-family: 'Main bold', sans-serif;
+
+    @include min(desktop) {
+        font-size: ptr(40, desktop);
+    }
+}
+
+.p-l {
+    font-family: 'Main regular', sans-serif;
+
+    @include min(desktop) {
+        font-size: ptr(24, desktop);
+    }
+}
+.p-m {
+    font-family: 'Main regular', sans-serif;
+
+    @include min(desktop) {
+        font-size: ptr(20, desktop);
+    }
+}
+.p-s {
+    font-family: 'Main regular', sans-serif;
+
+    @include min(desktop) {
+        font-size: ptr(16, desktop);
+    }
+}
+
+// ========================================================================== \\
+// ================================COLORS==================================== \\
+// ========================================================================== \\
+
+$grey_50: #F6F6F6;
+$grey_100: #E7E7E7;
+$grey_200: #D1D1D1;
+$grey_300: #B0B0B0;
+$grey_400: #888888;
+$grey_500: #6D6D6D;
+$grey_600: #5D5D5D;
+$grey_700: #4F4F4F;
+$grey_800: #454545;
+$grey_900: #3D3D3D;
+$grey_950: #262626;
+$grey_980: #1D1D1D;
+$grey_1000: #0E0E0E;
+
+.grey-50 {
+    color: $grey_50;
+}
+.grey-50-bg {
+    background-color: $grey_50;
+}
+.grey-100 {
+    color: $grey_100;
+}
+.grey-100-bg {
+    background-color: $grey_100;
+}
+.grey-200 {
+    color: $grey_200;
+}
+.grey-200-bg {
+    background-color: $grey_200;
+}
+.grey-300 {
+    color: $grey_300;
+}
+.grey-300-bg {
+    background-color: $grey_300;
+}
+.grey-400 {
+    color: $grey_400;
+}
+.grey-400-bg {
+    background-color: $grey_400;
+}
+.grey-500 {
+    color: $grey_500;
+}
+.grey-500-bg {
+    background-color: $grey_500;
+}
+.grey-600 {
+    color: $grey_600;
+}
+.grey-600-bg {
+    background-color: $grey_600;
+}
+.grey-700 {
+    color: $grey_700;
+}
+.grey-700-bg {
+    background-color: $grey_700;
+}
+.grey-800 {
+    color: $grey_800;
+}
+.grey-800-bg {
+    background-color: $grey_800;
+}
+.grey-900 {
+    color: $grey_900;
+}
+.grey-900-bg {
+    background-color: $grey_900;
+}
+.grey-950 {
+    color: $grey_950;
+}
+.grey-950-bg {
+    background-color: $grey_950;
+}
+.grey-980 {
+    color: $grey_980;
+}
+.grey-980-bg {
+    background-color: $grey_980;
+}
+.grey-1000 {
+    color: $grey_1000;
+}
+.grey-1000-bg {
+    background-color: $grey_1000;
+}
+
+
+
+// ========================================================================== \\
+// =================================SIZES==================================== \\
+// ========================================================================== \\
+
+.main-radius {
+    @include min(desktop) {
+        border-radius: ptr(32, desktop);
+    }
+}
+.side-margin {
+    @include min(desktop) {
+        margin-left: ptr(80, desktop);
+        margin-right: ptr(80, desktop);
+    }
+}
