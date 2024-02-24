@@ -1,7 +1,6 @@
 <script lang="ts">
     import {type HomeDataType} from '$lib/types/homeData.type.ts'
     import {slugify} from '$lib/utils.ts'
-    import {deslugify} from "$lib/utils.ts";
     export let data: HomeDataType
     const projet = data.projet[0]
     const projectSlug = slugify(projet.Titre)

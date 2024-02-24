@@ -15,6 +15,7 @@
     import Cell_10 from "$lib/homeCells/Cell_10.svelte";
     import Cell_11 from "$lib/homeCells/Cell_11.svelte";
     import Cell_12 from "$lib/homeCells/Cell_12.svelte";
+    import Cell_13 from "$lib/homeCells/Cell_13.svelte";
 
     import { type HomeDataType } from "$lib/types/homeData.type.js";
     export let data: HomeDataType;
@@ -36,5 +37,6 @@
         <Cell_10 {data}/>
         <Cell_11 {data}/>
         <Cell_12 {data}/>
+        <Cell_13 {data}/>
     </div>
 </div>
