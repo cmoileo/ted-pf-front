@@ -1,3 +1,7 @@
+interface MusiqueType {
+    id: number;
+    id_musique: string
+}
 interface ImgType {
     data: {
         id: number;
@@ -70,5 +74,10 @@ export interface HomeDataType {
         Label: string;
         Titre: string;
         Image: ImgType;
+    }
+    spotify: {
+        id: number;
+        lien_playlist: string;
+        musiques: MusiqueType[];
     }
 }
