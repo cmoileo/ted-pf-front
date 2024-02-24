@@ -8,6 +8,8 @@
     import Cell_3 from "$lib/homeCells/Cell_3.svelte";
     import Cell_4 from "$lib/homeCells/Cell_4.svelte";
     import Cell_5 from "$lib/homeCells/Cell_5.svelte";
+    import Cell_6 from "$lib/homeCells/Cell_6.svelte";
+    import Cell_7 from "$lib/homeCells/Cell_7.svelte";
     import { type HomeDataType } from "$lib/types/homeData.type.js";
     export let data: HomeDataType;
 </script>
@@ -21,5 +23,7 @@
         <Cell_3 {data}/>
         <Cell_4 {data}/>
         <Cell_5 {data}/>
+        <Cell_6 {data}/>
+        <Cell_7 {data}/>
     </div>
 </div>

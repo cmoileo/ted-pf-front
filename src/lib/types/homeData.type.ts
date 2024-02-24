@@ -64,72 +64,7 @@ export interface HomeDataType {
     Photo_bloc_3: ImgType
     Photo_bloc_4: ImgType
     Images_films: {
-        data: {
-            id: number;
-            attributes: {
-                name: string;
-                alternativeText: null | string;
-                caption: null | string;
-                width: number;
-                height: number;
-                formats: {
-                    thumbnail: {
-                        name: string;
-                        hash: string;
-                        ext: string;
-                        mime: string;
-                        path: null | string;
-                        width: number;
-                        height: number;
-                        size: number;
-                        url: string;
-                    };
-                    small: {
-                        name: string;
-                        hash: string;
-                        ext: string;
-                        mime: string;
-                        path: null | string;
-                        width: number;
-                        height: number;
-                        size: number;
-                        url: string;
-                    };
-                    medium: {
-                        name: string;
-                        hash: string;
-                        ext: string;
-                        mime: string;
-                        path: null | string;
-                        width: number;
-                        height: number;
-                        size: number;
-                        url: string;
-                    };
-                    large: {
-                        name: string;
-                        hash: string;
-                        ext: string;
-                        mime: string;
-                        path: null | string;
-                        width: number;
-                        height: number;
-                        size: number;
-                        url: string;
-                    };
-                };
-                hash: string;
-                ext: string;
-                mime: string;
-                size: number;
-                url: string;
-                previewUrl: null | string;
-                provider: string;
-                provider_metadata: null | string;
-                createdAt: string;
-                updatedAt: string;
-            };
-        }[];
+        data: ImgType[]
     };
     a_propos: {
         Label: string;
