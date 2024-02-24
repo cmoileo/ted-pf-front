@@ -6,7 +6,6 @@
     const label = data.Outils.Label
     const titre = data.Outils.Titre
     const images = data.Outils.Image.data
-    console.log(images)
 </script>
 
 <div class="cell-2">

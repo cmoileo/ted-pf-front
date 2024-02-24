@@ -20,8 +20,8 @@ a:not([class]){
 }
 
 img, picture, svg, video, canvas{
-  max-width: 100%; /* Makes it responsive */
-  height: auto; /* Makes it responsive */
+  max-width: 100%;
+  height: auto;
   vertical-align: middle; /* Makes text next to inline images look better */
   font-style: italic; /* If the images don't load it makes the alt decription look better */
   background-repeat: no-repeat;
