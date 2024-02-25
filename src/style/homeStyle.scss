@@ -1,7 +1,19 @@
+.home {
+  > h1 {
+    @include min(desktop) {
+      margin-top: ptr(10, desktop);
+      margin-bottom: ptr(65, desktop);
+    }
+  }
+}
+
 .home-grid-c {
   display: flex;
   flex-direction: column;
   gap: ptr(16, desktop);
+  @include min(desktop) {
+    padding-bottom: ptr(45, desktop);
+  }
 
   img {
     max-width: 100%;
@@ -37,9 +49,38 @@
   }
 }
 .cell-3 {
+  display: grid;
+  //li:nth-child(1) {
+  //  @include min(desktop) {
+  //    width: ptr(354, desktop);
+  //    height: ptr(219, desktop);
+  //  }
+  //}
+  //  li:nth-child(2) {
+  //      @include min(desktop) {
+  //      width: ptr(262, desktop);
+  //      height: ptr(219, desktop);
+  //      }
+  //  }
+  //  li:nth-child(3) {
+  //      @include min(desktop) {
+  //      width: ptr(262, desktop);
+  //      height: ptr(219, desktop);
+  //      }
+  //  }
+  //li:nth-child(4) {
+  //  @include min(desktop) {
+  //    width: ptr(354, desktop);
+  //    height: ptr(219, desktop);
+  //  }
+  //}
   @include min(desktop) {
     width: ptr(632, desktop);
     height: ptr(454, desktop);
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    row-gap: ptr(16, desktop);
+    column-gap: ptr(16, desktop);
   }
 }
 .cell-4 {

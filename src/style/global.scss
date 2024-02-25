@@ -1,3 +1,8 @@
 a {
   cursor: pointer;
 }
+main {
+  @include min(desktop) {
+    margin-top: ptr(80, desktop);
+  }
+}

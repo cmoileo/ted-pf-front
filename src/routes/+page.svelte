@@ -21,9 +21,9 @@
     export let data: HomeDataType;
 </script>
 
-<main class="side-margin">
-    <p class="p-s grey-50">Bienvenue sur le portfolio de</p>
-    <h1 class="grey-50 h1">Théo Houyoux</h1>
+<main class="side-margin home">
+    <p class="md-auto-x w-fit p-s grey-50">Bienvenue sur le portfolio de</p>
+    <h1 class="md-auto-x w-fit grey-50 h1">Théo Houyoux</h1>
     <div class="home-grid-c">
         <div class="top flex">
             <div class="left">
