@@ -6,13 +6,13 @@
     const images = data.Images_films.data
 </script>
 
-<div class="cell-7 main-radius">
+<div class="cell-7 main-radius relative">
     <div class="images-c">
         {#each images as image}
-            <img src={api_url + image.attributes.url} alt="" class="image"/>
+            <img class="main-radius" src={api_url + image.attributes.url} alt=""/>
         {/each}
     </div>
-    <div class="txt-c">
+    <div class="txt-c txt-section-bottom">
         <p class="p-s grey-200">Passion</p>
         <h2 class="h2 grey-50">Film</h2>
     </div>

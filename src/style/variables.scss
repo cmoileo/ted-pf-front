@@ -188,6 +188,16 @@ $grey_1000: #0E0E0E;
         padding-left: ptr(32, desktop);
     }
 }
+.absolute {
+    position: absolute;
+}
+.txt-section-bottom {
+    @include min(desktop) {
+        position: absolute;
+        bottom: ptr(40, desktop);
+        left: ptr(32, desktop);
+    }
+}
 .main-bg-gradiant {
     background: linear-gradient(130deg, rgba(33,39,19,1) 0%, rgba(31,31,31,1) 0%, rgba(21,21,21,1) 100%);
 }

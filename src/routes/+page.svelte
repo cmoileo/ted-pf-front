@@ -30,9 +30,11 @@
                 <Cell_1 {data}/>
                 <Cell_3 {data}/>
                 <Cell_7 {data}/>
-                <Cell_8 {data}/>
-                <Cell_9 {data}/>
-                <Cell_11 {data}/>
+                <div class="container">
+                    <Cell_8 {data}/>
+                    <Cell_9 {data}/>
+                </div>
+                <Cell_10 {data}/>
             </div>
             <div class="right">
                 <Cell_2 {data}/>
@@ -41,7 +43,7 @@
                     <Cell_5 {data}/>
                 </div>
                 <Cell_6 {data}/>
-                <Cell_10 {data}/>
+                <Cell_11 {data}/>
             </div>
         </div>
         <div class="bottom">

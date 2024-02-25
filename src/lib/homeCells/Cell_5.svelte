@@ -7,5 +7,5 @@
 </script>
 
 <div class="cell-5 main-radius">
-    <img src={img_url} alt="">
+    <img class="w-full main-radius" src={img_url} alt="">
 </div>

@@ -1,5 +1,7 @@
 .home-grid-c {
-  display: grid;
+  display: flex;
+  flex-direction: column;
+  gap: ptr(16, desktop);
 
   img {
     max-width: 100%;
@@ -8,6 +10,17 @@
   .top, .container {
     display: flex;
     gap: ptr(16, desktop)
+  }
+  .top {
+    .left, .right {
+      display: flex;
+      flex-direction: column;
+      gap: ptr(16, desktop);
+    }
+  }
+  .bottom {
+    display: flex;
+    gap: ptr(16, desktop);
   }
 }
 
@@ -78,15 +91,25 @@
   }
 }
 .cell-11 {
+  overflow: hidden;
   @include min(desktop) {
     width: ptr(632, desktop);
     height: ptr(993, desktop);
   }
+  .mockup {
+    bottom: -20%;
+    right: 0;
+  }
 }
 .cell-12 {
+  overflow: hidden;
   @include min(desktop) {
     width: ptr(858, desktop);
     height: ptr(568, desktop);
+  }
+  .mockup {
+    bottom: -20%;
+    right: 0;
   }
 }
 .cell-13 {
