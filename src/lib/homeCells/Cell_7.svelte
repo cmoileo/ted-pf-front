@@ -6,7 +6,7 @@
     const images = data.Images_films.data
 </script>
 
-<div class="cell-7">
+<div class="cell-7 main-radius">
     <div class="images-c">
         {#each images as image}
             <img src={api_url + image.attributes.url} alt="" class="image"/>

@@ -5,6 +5,6 @@
     const img_url = api_url + data.Photo_bloc_3.data[0].attributes.url
 </script>
 
-<div class="cell-9">
+<div class="cell-9 main-radius">
     <img src={img_url} alt="">
 </div>

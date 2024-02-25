@@ -1,0 +1,97 @@
+.home-grid-c {
+  display: grid;
+
+  img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+  .top, .container {
+    display: flex;
+    gap: ptr(16, desktop)
+  }
+}
+
+.cell-1 {
+  @include min(desktop) {
+    width: ptr(632, desktop);
+    height: ptr(502, desktop);
+  }
+}
+.cell-2 {
+  @include min(desktop) {
+    width: ptr(632, desktop);
+    height: ptr(450, desktop);
+  }
+}
+.cell-3 {
+  @include min(desktop) {
+    width: ptr(632, desktop);
+    height: ptr(454, desktop);
+  }
+}
+.cell-4 {
+  @include min(desktop) {
+    width: ptr(395, desktop);
+    height: ptr(247, desktop);
+  }
+}
+.cell-5 {
+  @include min(desktop) {
+    width: ptr(221, desktop);
+    height: ptr(247, desktop);
+  }
+}
+.cell-6 {
+  @include min(desktop) {
+    width: ptr(632, desktop);
+    height: ptr(364, desktop);
+  }
+}
+.cell-7 {
+  @include min(desktop) {
+    width: ptr(632, desktop);
+    height: ptr(351, desktop);
+  }
+}
+.cell-8 {
+  @include min(desktop) {
+    width: ptr(308, desktop);
+    height: ptr(367, desktop);
+  }
+}
+.cell-9 {
+  @include min(desktop) {
+    width: ptr(308, desktop);
+    height: ptr(367, desktop);
+  }
+}
+.cell-10 {
+  @include min(desktop) {
+    width: ptr(308, desktop);
+    height: ptr(367, desktop);
+  }
+}
+.cell-10 {
+  @include min(desktop) {
+    width: ptr(632, desktop);
+    height: ptr(364, desktop);
+  }
+}
+.cell-11 {
+  @include min(desktop) {
+    width: ptr(632, desktop);
+    height: ptr(993, desktop);
+  }
+}
+.cell-12 {
+  @include min(desktop) {
+    width: ptr(858, desktop);
+    height: ptr(568, desktop);
+  }
+}
+.cell-13 {
+  @include min(desktop) {
+    width: ptr(406, desktop);
+    height: ptr(568, desktop);
+  }
+}

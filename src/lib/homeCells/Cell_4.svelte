@@ -7,8 +7,10 @@
     const titre = data.Titre_projets
 </script>
 
-<div class="cell-4">
-    <p class="p-s grey-400">{label}</p>
-    <h2 class="h2 grey-50">{titre}</h2>
+<div class="cell-4 main-bg-gradiant">
+    <div class="txt-section-padding">
+        <p class="p-s grey-400">{label}</p>
+        <h2 class="h2 grey-50">{titre}</h2>
+    </div>
     <a href="/projets" class="btn btn-primary">Voir mes projets</a>
 </div>

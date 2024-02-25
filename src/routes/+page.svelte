@@ -21,22 +21,32 @@
     export let data: HomeDataType;
 </script>
 
-<div>
+<main class="side-margin">
     <p class="p-s grey-50">Bienvenue sur le portfolio de</p>
     <h1 class="grey-50 h1">Théo Houyoux</h1>
     <div class="home-grid-c">
-        <Cell_1 {data}/>
-        <Cell_2 {data}/>
-        <Cell_3 {data}/>
-        <Cell_4 {data}/>
-        <Cell_5 {data}/>
-        <Cell_6 {data}/>
-        <Cell_7 {data}/>
-        <Cell_8 {data}/>
-        <Cell_9 {data}/>
-        <Cell_10 {data}/>
-        <Cell_11 {data}/>
-        <Cell_12 {data}/>
-        <Cell_13 {data}/>
+        <div class="top flex">
+            <div class="left">
+                <Cell_1 {data}/>
+                <Cell_3 {data}/>
+                <Cell_7 {data}/>
+                <Cell_8 {data}/>
+                <Cell_9 {data}/>
+                <Cell_11 {data}/>
+            </div>
+            <div class="right">
+                <Cell_2 {data}/>
+                <div class="container">
+                    <Cell_4 {data}/>
+                    <Cell_5 {data}/>
+                </div>
+                <Cell_6 {data}/>
+                <Cell_10 {data}/>
+            </div>
+        </div>
+        <div class="bottom">
+            <Cell_12 {data}/>
+            <Cell_13 {data}/>
+        </div>
     </div>
-</div>
+</main>

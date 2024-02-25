@@ -3,7 +3,7 @@
     export let data: HomeDataType
 </script>
 
-<div class="cell-13">
+<div class="cell-13 main-radius">
     <p class="p-s-grey-200">tedui.design@gmail.com</p>
     <h2 class="h2 grey-50">Bonjour 👋,</h2>
     <form action="submit">

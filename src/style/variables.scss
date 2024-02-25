@@ -167,3 +167,170 @@ $grey_1000: #0E0E0E;
         margin-right: ptr(80, desktop);
     }
 }
+
+
+
+
+
+
+.x-center {
+    justify-content: center;
+}
+.relative {
+    position: relative;
+}
+.behind {
+    z-index: -1;
+}
+.txt-section-padding {
+    @include min(desktop) {
+        padding-top: ptr(40, desktop);
+        padding-left: ptr(32, desktop);
+    }
+}
+.main-bg-gradiant {
+    background: linear-gradient(130deg, rgba(33,39,19,1) 0%, rgba(31,31,31,1) 0%, rgba(21,21,21,1) 100%);
+}
+.x-between {
+    justify-content: space-between;
+}
+
+.x-around {
+    justify-content: space-around;
+}
+
+.y-center {
+    align-items: center;
+}
+
+.y-between {
+    align-items: space-between;
+}
+
+.y-around {
+    align-items: space-around;
+}
+
+/** If allready Flex Direction : Column **/
+
+.y-center {
+    justify-content: center;
+}
+
+.y-between {
+    justify-content: space-between;
+}
+
+.y-around {
+    justify-content: space-around;
+}
+.cover {
+    object-fit: cover;
+}
+.obj-top {
+    object-position: top;
+}
+.x-center {
+    align-items: center;
+}
+
+.x-between {
+    align-items: space-between;
+}
+
+.x-around {
+    align-items: space-around;
+}
+
+.fd-column {
+    flex-direction: column;
+}
+
+.fd-row {
+    flex-direction: row;
+}
+
+.abs-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.abs-center-x {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.abs-center-y {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.w-full {
+    width: 100%;
+}
+
+.h-full {
+    height: 100%;
+}
+
+.tw-pretty {
+    text-wrap: pretty;
+}
+
+.flex {
+    display: flex;
+}
+
+.hidden-sb::-webkit-scrollbar {
+    display: none;
+}
+
+.contain {
+    object-fit: contain;
+}
+
+.only-desktop {
+    @include max(desktop) {
+        display: none;
+    }
+}
+
+.only-mobile {
+    @include min(desktop) {
+        display: none;
+    }
+}
+
+.mobile-column {
+    @include max(desktop) {
+        flex-direction: column;
+    }
+}
+
+.mobile-x-start {
+    @include max(desktop) {
+        align-items: flex-start;
+    }
+}
+
+.desktop-row {
+    @include min(desktop) {
+        flex-direction: row;
+    }
+}
+
+.mobile-x-center {
+    @include max(desktop) {
+        align-items: center;
+    }
+}
+
+.desktop-x-end {
+    @include min(desktop) {
+        align-items: flex-end;
+    }
+}

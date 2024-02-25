@@ -8,7 +8,7 @@
     const lien_playlist = spotify.lien_playlist
 </script>
 
-<div class="cell-8">
+<div class="cell-8 main-radius">
     <a target="_blank" href={lien_playlist} class="txt-c">
         <p class="p-s grey-200">Passion</p>
         <h2 class="h2 grey-50">Musique</h2>

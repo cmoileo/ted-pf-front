@@ -6,7 +6,7 @@
     const projectSlug = slugify(projet.Titre)
 </script>
 
-<div class="cell-11">
+<div class="cell-11 main-radius">
     <a href="/projets/{projectSlug}" class="txt-c">
         <p class="p-s grey-200">{projet.Label}</p>
         <h2 class="h2-grey-50">{projet.Titre}</h2>
