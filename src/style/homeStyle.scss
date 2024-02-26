@@ -88,6 +88,7 @@
             filter: blur(20px);
             min-width: 45%;
             min-height: 45%;
+            animation: pulse 2s infinite;
           }
           &::after {
             content: "";
@@ -114,30 +115,6 @@
 }
 .cell-3 {
   display: grid;
-  //li:nth-child(1) {
-  //  @include min(desktop) {
-  //    width: ptr(354, desktop);
-  //    height: ptr(219, desktop);
-  //  }
-  //}
-  //  li:nth-child(2) {
-  //      @include min(desktop) {
-  //      width: ptr(262, desktop);
-  //      height: ptr(219, desktop);
-  //      }
-  //  }
-  //  li:nth-child(3) {
-  //      @include min(desktop) {
-  //      width: ptr(262, desktop);
-  //      height: ptr(219, desktop);
-  //      }
-  //  }
-  //li:nth-child(4) {
-  //  @include min(desktop) {
-  //    width: ptr(354, desktop);
-  //    height: ptr(219, desktop);
-  //  }
-  //}
   @include min(desktop) {
     width: ptr(632, desktop);
     height: ptr(454, desktop);
@@ -145,6 +122,101 @@
     grid-template-rows: repeat(2, 1fr);
     row-gap: ptr(16, desktop);
     column-gap: ptr(16, desktop);
+  }
+  li {
+    list-style: none;
+    position: relative;
+    overflow: hidden;
+    background-color: $grey-980;
+    .circle {
+      width: ptr(171, desktop);
+      height: ptr(171, desktop);
+      border-radius: 1000px;
+      position: absolute;
+      filter: blur(80px);
+    }
+    .circle:first-child {
+      top: 0;
+      left: ptr(200, desktop);
+      animation: floatLeft 2s ease-in infinite;
+    }
+    .circle:nth-child(2) {
+      top: ptr(-80, desktop);
+      left: ptr(170, desktop);
+      animation: floatUp 2s linear infinite;
+    }
+    .circle:nth-child(3) {
+      top: ptr(-102, desktop);
+      left: ptr(-22, desktop);
+      animation: floatRight 2s ease-in infinite;
+    }
+    .circle:nth-child(4) {
+      top: ptr(-62, desktop);
+      left: ptr(60, desktop);
+      animation: floatDown 2s linear infinite;
+    }
+  }
+  li:first-child {
+    width: 116%;
+    .circle:first-child {
+      background-color: #8328BD;
+    }
+    .circle:nth-child(2) {
+      background-color: #D42C82;
+    }
+    .circle:nth-child(3) {
+      background-color: #F7AE42;
+    }
+    .circle:nth-child(4) {
+      background-color: #ED7059;
+    }
+  }
+  li:nth-child(2) {
+    width: 80%;
+    transform: translateX(20%);
+    .circle:first-child {
+      background-color: #22A094;
+    }
+    .circle:nth-child(2) {
+      background-color: #F6F6F6;
+    }
+    .circle:nth-child(3) {
+      background-color: #FF90E7;
+    }
+    .circle:nth-child(4) {
+      background-color: #FFC901;
+    }
+  }
+  li:nth-child(3) {
+    width: 80%;
+    .circle:first-child {
+      background-color: #4176FA;
+    }
+    .circle:nth-child(2) {
+      background-color: #66D785;
+    }
+    .circle:nth-child(3) {
+      background-color: #4073E9;
+    }
+    .circle:nth-child(4) {
+      background-color: #A5B8EA;
+    }
+  }
+  li:nth-child(4) {
+    width: 118%;
+    transform: translateX(-17%);
+    .circle:first-child {
+      background-color: #F24E1E;
+    }
+    .circle:nth-child(2) {
+      background-color: #A259FF;
+    }
+    .circle:nth-child(3) {
+      background-color: #0ACF83;
+    }
+    .circle:nth-child(4) {
+      background-color: #1ABCFE;
+    }
   }
 }
 .cell-4 {
