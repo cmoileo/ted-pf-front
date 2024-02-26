@@ -161,6 +161,11 @@ $grey_1000: #0E0E0E;
         border-radius: ptr(32, desktop);
     }
 }
+.secondary-radius {
+    @include min(desktop) {
+        border-radius: ptr(16, desktop);
+    }
+}
 .side-margin {
     @include min(desktop) {
         margin-left: ptr(80, desktop);
@@ -186,6 +191,10 @@ $grey_1000: #0E0E0E;
     @include min(desktop) {
         padding-top: ptr(40, desktop);
         padding-left: ptr(32, desktop);
+
+        h2 {
+            margin-top: ptr(8, desktop);
+        }
     }
 }
 .absolute {

@@ -15,7 +15,13 @@
     </div>
     <div class="images-c">
         {#each images as image}
-            <img src={api_url + image.attributes.url} class="img-s"/>
+            <div class="img-c">
+                <div class="secondary-radius">
+                    <img src="Noise%20effect.png" alt="" class="abs-center noise">
+                    <img src={api_url + image.attributes.url} alt="" class="blured"/>
+                    <img src={api_url + image.attributes.url} alt="" class="img-s abs-center"/>
+                </div>
+            </div>
         {/each}
     </div>
 </div>
