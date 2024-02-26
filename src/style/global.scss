@@ -6,3 +6,20 @@ main {
     margin-top: ptr(80, desktop);
   }
 }
+.link-arrow {
+  position: absolute;
+  top: ptr(40, desktop);
+  right: ptr(32, desktop);
+  transform: translate(10px, -10px);
+  z-index: 2;
+  opacity: 0;
+  transition: .2s ease-in-out;
+}
+.has-link-arrow {
+  &:hover {
+    .link-arrow {
+      transform: translate(0, 0);
+      opacity: 1;
+    }
+  }
+}
