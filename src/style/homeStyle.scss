@@ -318,6 +318,60 @@
     width: ptr(308, desktop);
     height: ptr(367, desktop);
   }
+  position: relative;
+  overflow: hidden;
+  .circle {
+    width: ptr(300, desktop);
+    height: ptr(130, desktop);
+    border-radius: 1000px;
+    position: absolute;
+    filter: blur(80px);
+    z-index: 0;
+  }
+  .circle:nth-child(1) {
+    background-color: $grey-1000;
+    top: ptr(48, desktop);
+    left: ptr(200, desktop);
+    animation: floatUp 2s linear infinite;
+  }
+    .circle:nth-child(2) {
+        background-color: #25AD6A;
+      top: ptr(-54, desktop);
+      left: ptr(169, desktop);
+      animation: floatDown 2s linear infinite;
+    }
+    .circle:nth-child(3) {
+        background-color: #25AD6A;
+      top: ptr(-83, desktop);
+      left: ptr(-22, desktop);
+        animation: floatLeft 2s linear infinite;
+    }
+    .circle:nth-child(4) {
+        background-color: $grey-1000;
+      top: ptr(-28, desktop);
+      left: ptr(68, desktop);
+        animation: floatRight 2s linear infinite;
+    }
+.txt-section-padding {
+  z-index: 2;
+  position: relative;
+}
+  .musiques-c {
+    position: absolute;
+    bottom: ptr(32, desktop);
+    left: ptr(24, desktop);
+    padding-right: ptr(24, desktop);
+    z-index: 1;
+
+    .BackgroundColorContainer_backgroundColorContainer__YZSQ7 {
+      display: none !important;
+    }
+  }
+
+  .BackgroundColorContainer_backgroundColorContainer__YZSQ7 {
+    display: none !important;
+
+  }
 }
 .cell-9 {
   @include min(desktop) {
