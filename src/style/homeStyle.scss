@@ -275,9 +275,40 @@
   }
 }
 .cell-7 {
+  overflow: hidden;
   @include min(desktop) {
     width: ptr(632, desktop);
     height: ptr(351, desktop);
+  }
+  &::after {
+      content: "";
+      position: absolute;
+      display: block;
+      top: -1px;
+      left: 0;
+      width: 100%;
+      z-index: 2;
+      height: calc(100% + 1px);
+      border-radius: ptr(32, desktop);
+      background: linear-gradient(290deg, rgba(33,39,19,1) 0%, rgba(14,14,14,0) 0%, rgba(14,14,14,0.6545211834733893) 55%, rgba(21,21,21,1) 100%);
+  }
+  .txt-c {
+    z-index: 3;
+  }
+  .images-c {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    overflow-x: auto;
+    .swipeable-item-inner {
+      height: 100%;
+    }
+    img {
+      height: 100%;
+      min-width: 100%;
+      object-fit: cover;
+      z-index: 0;
+    }
   }
 }
 .cell-8 {
