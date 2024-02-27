@@ -402,4 +402,9 @@
       right: ptr(16, desktop);
     }
   }
+
+  .success-msg {
+    margin-bottom: ptr(200, desktop);
+    text-wrap: pretty;
+  }
 }

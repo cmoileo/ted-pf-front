@@ -1,6 +1,30 @@
 <script lang="ts">
     import {type HomeDataType} from '$lib/types/homeData.type.ts'
     export let data: HomeDataType
+    let isMailSent = false
+    
+    const onSubmit = async (e: SubmitEvent) => {
+        e.preventDefault()
+        if (e) {
+            isMailSent = true
+            const target = {
+                Prénom: e.target.prenom.value,
+                Nom: e.target.nom.value,
+                Email: e.target.email.value,
+                Message: e.target.message.value,
+            }
+            const res = await fetch("/api/sendmail/", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                }, body: JSON.stringify(target)
+            })
+            const data = await res.json()
+            if (data.success === "success") {
+                let isMailSent = true
+            }
+        }
+    }
 </script>
 
 <div class="cell-13 main-radius main-bg-gradiant txt-section-padding">
@@ -8,13 +32,14 @@
         <p class="p-s grey-200">tedui.design@gmail.com</p>
         <h2 class="h2 grey-50">Bonjour 👋,</h2>
     </div>
-    <form action="submit relative">
+    {#if !isMailSent}
+    <form on:submit={(e) => onSubmit(e)} action="submit relative">
         <div class="flex">
             <input class="p-s grey-100" id="prenom" name="prenom" type="text" placeholder="Prénom" autocomplete="given-name" required>
             <input class="p-s grey-100" id="nom" name="nom" type="text" placeholder="Nom" autocomplete="family-name" required>
         </div>
         <label for="email"></label>
-        <input class="p-s grey-100" id="email" name="email" type="email" placeholder="Adresse mail" autocomplete="email" required>
+        <input class="p-s grey-100" id="email" name="email" type="email" placeholder="Adresse mail" autocomplete="on" required>
         <label for="message"></label>
         <textarea class="p-s grey-100" id="message" name="message" placeholder="Expliquez-moi votre projet..." required></textarea>
         <button class="send-btn" type="submit">
@@ -23,4 +48,8 @@
             </svg>
         </button>
     </form>
+    {/if}
+    {#if isMailSent}
+        <p class="p-l success-msg grey-100">Votre message a été envoyé avec succès !</p>
+    {/if}
 </div>
