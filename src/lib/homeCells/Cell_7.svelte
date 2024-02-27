@@ -27,7 +27,7 @@
     const images = data.Images_films.data;
 </script>
 
-<div class="cell-7 main-radius relative">
+<div class="cell-7 main-radius relative linear-bg-cell">
     <div class="images-c relative swiper">
         <div class="swiper-wrapper">
             {#each images as image}
