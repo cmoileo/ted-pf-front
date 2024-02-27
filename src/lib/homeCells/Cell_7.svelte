@@ -1,28 +1,40 @@
 <script lang="ts">
-    import {type HomeDataType} from '$lib/types/homeData.type.ts'
-    import {api_url} from "$lib/publicConsts.ts";
-    import { Swipe, SwipeItem } from "svelte-swipe";
-    const swipeConfig = {
-        autoplay: true,
-        autoplayInterval: 5000,
-        delay: 2000,
-        showIndicators: false,
-        transitionDuration: 500,
-        defaultIndex: 0,
-    };
-    export let data: HomeDataType
-    const images = data.Images_films.data
+    import { onMount } from 'svelte';
+
+    import { type HomeDataType } from '$lib/types/homeData.type.ts';
+    import { api_url } from "$lib/publicConsts.ts";
+
+    export let data: HomeDataType;
+    let swiper;
+
+    onMount(() => {
+        const mySwiper = new Swiper('.swiper', {
+            slidesPerView: 1,
+            spaceBetween: 30,
+            loop: true,
+            autoplay: {
+                delay: 4000,
+                disableOnInteraction: false,
+            },
+            animation: {
+                duration: 1000,
+                easing: 'ease-in-out',
+                fillMode: 'forwards'
+            },
+        });
+    });
+
+    const images = data.Images_films.data;
 </script>
 
 <div class="cell-7 main-radius relative">
-    <div class="images-c relative swipe-holder">
-        <Swipe {...swipeConfig}>
+    <div class="images-c relative swiper">
+        <div class="swiper-wrapper">
             {#each images as image}
-                <SwipeItem>
-                    <img class="main-radius" src={api_url + image.attributes.url} alt=""/>
-                </SwipeItem>
+                <img class="main-radius swiper-slide" src={api_url + image.attributes.url} alt=""/>
+                <img class="main-radius swiper-slide" src={api_url + image.attributes.url} alt=""/>
             {/each}
-        </Swipe>
+        </div>
     </div>
     <div class="txt-c txt-section-bottom">
         <p class="p-s grey-200">Passion</p>

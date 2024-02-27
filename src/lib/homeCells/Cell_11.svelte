@@ -9,12 +9,12 @@
 </script>
 
 <div class="cell-11 main-radius relative">
-    <img class="main-radius w-full h-full absolute behind" src="Bg.jpg" alt="">
-    <div class="txt-section-padding">
-        <a href="/projets/{projectSlug}" class="txt-c">
-            <p class="p-s grey-200">{projet.Label}</p>
-            <h2 class="h2-grey-50">{projet.Titre}</h2>
-        </a>
-    </div>
-    <img class="absolute mockup" src="{api_url + projet.Mockup.data.attributes.url}" alt="">
+    <a href="/projets/{projectSlug}">
+        <img class="main-radius w-full h-full absolute behind" src="Bg.jpg" alt="">
+        <div class="txt-section-padding">
+                <p class="p-m grey-200">{projet.Label}</p>
+                <h2 class="h2-grey-50">{projet.Titre}</h2>
+        </div>
+        <img class="absolute mockup" src="{api_url + projet.Mockup.data.attributes.url}" alt="">
+    </a>
 </div>
