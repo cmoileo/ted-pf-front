@@ -377,5 +377,29 @@
   @include min(desktop) {
     width: ptr(406, desktop);
     height: ptr(568, desktop);
+    padding-bottom: ptr(40, desktop)
+  }
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+
+  form {
+    width: calc(100% - ptr(32, desktop));
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    gap: ptr(16, desktop);
+    .flex input {
+      width: ptr(165, desktop)
+    }
+    textarea {
+      height: ptr(230, desktop);
+      resize: none;
+    }
+    button {
+      position: absolute;
+      bottom: ptr(16, desktop);
+      right: ptr(16, desktop);
+    }
   }
 }

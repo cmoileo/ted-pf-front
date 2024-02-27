@@ -23,3 +23,32 @@ main {
     }
   }
 }
+
+form {
+  input, textarea {
+    background-color: $grey_1000;
+    border-radius: ptr(16, desktop);
+    padding: ptr(16, desktop);
+    border: none;
+    &::placeholder {
+      color: $grey_600;
+    }
+  }
+  .flex {
+    gap: ptr(12, desktop);
+  }
+}
+
+.send-btn {
+  background-color: #4355FB;
+  border: none;
+  border-radius: 100px;
+  padding: ptr(10, desktop);
+  box-shadow: 0px 0px 15px 5px rgba(53,67,198,0.3);
+  cursor: pointer;
+  animation: pulse-blue 2s infinite;
+
+  svg {
+    text-shadow: 0px 0px 20px rgba(193, 193, 193, 0.3);
+  }
+}
