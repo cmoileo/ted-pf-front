@@ -29,6 +29,10 @@ img, picture, svg, video, canvas{
   background-size: cover;
 }
 
+a {
+  text-decoration: none;
+}
+
 input, button, textarea, select{
   font: inherit; /* Makes these elements inherit fonts */
 }

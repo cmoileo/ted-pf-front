@@ -12,5 +12,8 @@
         <p class="p-s grey-400">{label}</p>
         <h2 class="h2 grey-50">{titre}</h2>
     </div>
-    <a href="/projets" class="btn btn-primary">Voir mes projets</a>
+    <a href="/projets" class="btn p-s-extrabold grey-50 secondary-radius btn-primary">
+        Voir mes projets
+        <img class="abs-center cover behind secondary-radius" src="/stars.png" alt="">
+    </a>
 </div>

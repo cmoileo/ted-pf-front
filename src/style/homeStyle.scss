@@ -234,6 +234,32 @@
   @include min(desktop) {
     width: ptr(395, desktop);
     height: ptr(247, desktop);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .btn {
+    display: block;
+    padding: ptr(17, desktop) 0;
+    width: calc(100% - ptr(32, desktop) * 2);
+    margin: 0 auto ptr(40, desktop) auto;
+    text-align: center;
+    position: relative;
+    cursor: pointer;
+    z-index: 2;
+    overflow: hidden;
+
+    img {
+      min-width: 100%;
+      min-height: 100%;
+      transition: .2s ease-in-out;
+    }
+    &:hover {
+      img {
+        min-width: 120%;
+        min-height: 120%;
+      }
+    }
   }
 }
 .cell-5 {

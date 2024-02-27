@@ -14,6 +14,12 @@
     font-weight: normal;
     font-style: normal;
 }
+@font-face {
+    font-family: 'Main ExtraBold';
+    src: url('/RedHatDisplay-ExtraBold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
 
 .h1 {
     font-family: 'Main bold', sans-serif;
@@ -51,6 +57,14 @@
     @include min(desktop) {
         font-size: ptr(16, desktop);
     }
+}
+.p-s-extrabold {
+    font-family: 'Main ExtraBold', sans-serif;
+
+    @include min(desktop) {
+        font-size: ptr(16, desktop);
+    }
+
 }
 
 // ========================================================================== \\
