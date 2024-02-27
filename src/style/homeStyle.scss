@@ -364,8 +364,13 @@
     height: ptr(568, desktop);
   }
   .mockup {
-    bottom: -20%;
+    bottom: -30%;
     right: 0;
+    object-fit: contain;
+    object-position: right;
+  }
+  .bg {
+    transform: scale(1.1);
   }
 }
 .cell-13 {

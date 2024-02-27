@@ -12,11 +12,11 @@
         <path d="M18 16.5L18 7.5C18 6.67157 17.3284 6 16.5 6L7.49997 6" stroke="#D1D1D1" stroke-width="2" stroke-linecap="round"/>
         <path d="M17.5 6.5L6 18" stroke="#D1D1D1" stroke-width="2" stroke-linecap="round" stroke-linejoin="bevel"/>
     </svg>
-    <img class="main-radius w-full h-full absolute behind" src="Bg.jpg" alt="">
+    <img class="main-radius w-full h-full absolute behind bg" src="/night-bg.png" alt="">
     <div class="txt-section-padding">
         <a href="/projets/{projectSlug}" class="txt-c">
-            <p class="p-s grey-200">{projet.Label}</p>
-            <h2 class="h2-grey-50">{projet.Titre}</h2>
+            <p class="p-m grey-200">{projet.Label}</p>
+            <h2 class="h2 grey-50">{projet.Titre}</h2>
         </a>
     </div>
     <img class="absolute mockup" src="{api_url + projet.Mockup.data.attributes.url}" alt="">
