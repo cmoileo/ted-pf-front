@@ -25,7 +25,7 @@
     </div>
     <div class="musiques-c">
         {#each musiques as musique}
-            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/{musique.id_musique}?utm_source=generator" allowtransparency="true" width="100%" height="60" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/{musique.id_musique}?utm_source=generator" allowtransparency="true" width="100%" height="90" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
         {/each}
     </div>
 </div>

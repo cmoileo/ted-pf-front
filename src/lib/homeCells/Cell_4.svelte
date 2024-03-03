@@ -14,6 +14,8 @@
     </div>
     <a href="/projets" class="btn p-s-extrabold grey-50 secondary-radius btn-primary">
         Voir mes projets
-        <img class="abs-center cover behind secondary-radius" src="/stars.png" alt="">
+        <video autoplay muted loop class="abs-center cover behind secondary-radius">
+            <source src="/Fond%20Espace%20Etoilé%201920x1080%20(1).mp4" />
+        </video>
     </a>
 </div>

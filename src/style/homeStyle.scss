@@ -249,13 +249,14 @@
     z-index: 2;
     overflow: hidden;
 
-    img {
+    video {
       min-width: 100%;
       min-height: 100%;
       transition: .2s ease-in-out;
+      filter: brightness(0.5);
     }
     &:hover {
-      img {
+      video {
         min-width: 120%;
         min-height: 120%;
       }
@@ -316,7 +317,7 @@
 .cell-8 {
   @include min(desktop) {
     width: ptr(308, desktop);
-    height: ptr(367, desktop);
+    height: ptr(470, desktop);
   }
   position: relative;
   overflow: hidden;
@@ -376,7 +377,7 @@
 .cell-9 {
   @include min(desktop) {
     width: ptr(308, desktop);
-    height: ptr(367, desktop);
+    height: ptr(470, desktop);
   }
 }
 .cell-10 {
@@ -395,7 +396,7 @@
   overflow: hidden;
   @include min(desktop) {
     width: ptr(632, desktop);
-    height: ptr(993, desktop);
+    height: ptr(1096, desktop);
   }
   > a {
     display: block;
