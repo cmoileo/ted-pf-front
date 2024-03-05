@@ -2,11 +2,36 @@
   @import "../../../style/main.scss";
 </style>
 
-<script>
+<script lang="ts">
     import GoBackButton from "$lib/components/GoBackButton.svelte";
     import { api_url } from "$lib/publicConsts.ts";
     export let data
-    console.log(data)
+    let blurBg: HTMLElement
+    
+    const handleZoomImg = (e: HTMLElement) => {
+        e.srcElement.offsetParent.classList.toggle('active')
+        if (!blurBg.classList.contains("active")) {
+            blurBg.style.display = "block"
+            setTimeout(() => {
+                blurBg.classList.add("active")
+            }, 5)
+        } else {
+            blurBg.classList.remove("active")
+            setTimeout(() => {
+                blurBg.style.display = "none"
+            }, 300)
+        }
+    }
+    const handleClickOutside = () => {
+        blurBg.classList.remove("active")
+        setTimeout(() => {
+            blurBg.style.display = "none"
+        }, 300)
+        const images = document.querySelectorAll('.zoom-img-bg')
+        images.forEach((img) => {
+            img.classList.remove('active')
+        })
+    }
 </script>
 
 <main class="single-project">
@@ -19,7 +44,7 @@
         <section class="details">
             <aside>
                 {#each data.Images.data as image}
-                    <div class="has-link-arrow main-radius overflow-hidden relative zoom-img-bg">
+                    <div on:click={(e) => handleZoomImg(e)} class="has-link-arrow main-radius overflow-hidden relative zoom-img-bg">
                         <svg class="link-arrow" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M18 16.5L18 7.5C18 6.67157 17.3284 6 16.5 6L7.49997 6" stroke="#D1D1D1" stroke-width="2" stroke-linecap="round"/>
                             <path d="M17.5 6.5L6 18" stroke="#D1D1D1" stroke-width="2" stroke-linecap="round" stroke-linejoin="bevel"/>
@@ -45,4 +70,5 @@
             </section>
         </section>
     </article>
+    <div on:click={handleClickOutside} bind:this='{blurBg}' class="blur-bg"></div>
 </main>

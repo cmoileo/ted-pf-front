@@ -1,5 +1,6 @@
 .single-project {
   margin: ptr(48, desktop) ptr(80, desktop);
+  padding-bottom: ptr(48, desktop);
 
   article {
     .project-header {
@@ -20,11 +21,25 @@
         display: flex;
         flex-direction: column;
         gap: ptr(16, desktop);
+        .zoom-img-bg.active {
+          position: fixed;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          z-index: 9;
+          width: calc(100% - ptr(160, desktop));
+          height: calc(100% - ptr(160, desktop));
+
+          img {
+            height: 100%;
+          }
+        }
         img {
           border-radius: ptr(32, desktop);
           height: ptr(600, desktop);
           object-fit: cover;
           width: 100%;
+          transition: .3s ease-in-out;
         }
       }
       .content {
@@ -46,5 +61,20 @@
         }
       }
     }
+  }
+  .blur-bg {
+    background: #0E0E0E;
+    opacity: 0%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: none;
+    transition: .3s ease-in-out;
+    z-index: 2;
+  }
+  .blur-bg.active {
+    opacity: 90% !important;
   }
 }
