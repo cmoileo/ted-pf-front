@@ -1,3 +1,50 @@
 .single-project {
   margin: ptr(48, desktop) ptr(80, desktop);
+
+  article {
+    .project-header {
+      h2 {
+        margin-top: ptr(8, desktop)
+      }
+      p, h2 {
+        text-align: center;
+      }
+    }
+    .details {
+      margin-top: ptr(64, desktop);
+      display: flex;
+      gap: ptr(40, desktop);
+
+      aside {
+        min-width: ptr(663, desktop);
+        display: flex;
+        flex-direction: column;
+        gap: ptr(16, desktop);
+        img {
+          border-radius: ptr(32, desktop);
+          height: ptr(600, desktop);
+          object-fit: cover;
+          width: 100%;
+        }
+      }
+      .content {
+        position: sticky;
+        top: 0;
+        height: fit-content;
+
+        .article-infos {
+          display: flex;
+          flex-direction: column;
+          gap: ptr(12, desktop);
+          margin-bottom: ptr(32, desktop);
+        }
+
+        .article-body {
+          display: flex;
+          flex-direction: column;
+          gap: ptr(32, desktop)
+        }
+      }
+    }
+  }
 }
