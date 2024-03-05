@@ -22,7 +22,13 @@
 .home-grid-c {
   display: flex;
   flex-direction: column;
-  gap: ptr(16, desktop);
+  @include max(desktop) {
+    gap: ptr(12, mobile);
+    padding-bottom: ptr(25, mobile);
+  }
+  @include min(desktop) {
+    gap: ptr(16, desktop);
+  }
   @include min(desktop) {
     padding-bottom: ptr(45, desktop);
   }
@@ -33,22 +39,31 @@
   }
   .top, .container {
     display: flex;
-    gap: ptr(16, desktop);
 
     @include max(desktop) {
       flex-direction: column;
+      gap: ptr(12, mobile);
+    }
+    @include min(desktop) {
+      gap: ptr(16, desktop);
     }
   }
   .top {
     .left, .right {
       display: flex;
       flex-direction: column;
-      gap: ptr(16, desktop);
+      @include max(desktop) {
+        gap: ptr(12, mobile);
+      }
+      @include min(desktop) {
+        gap: ptr(16, desktop);
+      }
     }
   }
   .bottom {
     @include max(desktop) {
       flex-direction: column;
+      gap: ptr(12, mobile);
     }
     display: flex;
     gap: ptr(16, desktop);
@@ -383,7 +398,7 @@
   .cell-8 {
     @include max(desktop) {
       width: 100%;
-      height: ptr(260, mobile);
+      height: ptr(320, mobile);
     }
     @include min(desktop) {
       width: ptr(308, desktop);
