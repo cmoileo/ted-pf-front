@@ -403,6 +403,12 @@ $grey_1000: #0E0E0E;
 .w-fit {
     width: fit-content;
 }
+.grid-gap {
+    gap: ptr(16, desktop);
+}
+.grid-gap-s {
+    gap: ptr(8, desktop);
+}
 
 
 @keyframes floatUp {

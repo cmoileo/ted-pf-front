@@ -2,7 +2,7 @@
   margin: ptr(48, desktop) ptr(80, desktop);
   padding-bottom: ptr(48, desktop);
 
-  article {
+  > article {
     .project-header {
       h2 {
         margin-top: ptr(8, desktop)
