@@ -1,6 +1,5 @@
 <script lang="ts">
     import {type HomeDataType} from '$lib/types/homeData.type.ts'
-    import {api_url} from "$lib/publicConsts.ts";
 
     export let data: HomeDataType
     const spotify = data.spotify
@@ -25,7 +24,7 @@
     </div>
     <div class="musiques-c">
         {#each musiques as musique}
-            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/{musique.id_musique}?utm_source=generator" allowtransparency="true" width="100%" height="90" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+            <iframe title="spotify song" style="border-radius:12px" src="https://open.spotify.com/embed/track/{musique.id_musique}?utm_source=generator" allowtransparency="true" width="100%" height="90" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
         {/each}
     </div>
 </div>

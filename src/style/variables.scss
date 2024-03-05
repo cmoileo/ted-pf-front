@@ -36,6 +36,12 @@
         font-size: ptr(40, desktop);
     }
 }
+.h3 {
+    font-family: 'Main Medium', sans-serif;
+    @include min(desktop) {
+        font-size: ptr(30, desktop);
+    }
+}
 
 .p-l {
     font-family: 'Main regular', sans-serif;
@@ -56,6 +62,13 @@
 
     @include min(desktop) {
         font-size: ptr(16, desktop);
+    }
+}
+.p-xs {
+    font-family: 'Main regular', sans-serif;
+
+    @include min(desktop) {
+        font-size: ptr(14, desktop);
     }
 }
 .p-s-extrabold {
@@ -224,7 +237,7 @@ $grey_1000: #0E0E0E;
 .overflow-hidden {
     overflow: hidden;
 }
-.main-bg-gradiant {
+.main-bg-gradiant, %main-bg-gradiant {
     background: linear-gradient(130deg, rgba(33,39,19,1) 0%, rgba(31,31,31,1) 0%, rgba(21,21,21,1) 100%);
 }
 .x-between {

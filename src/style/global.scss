@@ -63,3 +63,24 @@ form {
     }
   }
 }
+
+.go-back {
+  display: flex;
+  gap: ptr(8, desktop);
+  align-items: center;
+  padding: ptr(12, desktop) ptr(16, desktop);
+  border-radius: 100px;
+  width: fit-content;
+  border: 1px solid #292929;
+  cursor: pointer;
+  @extend %main-bg-gradiant;
+
+  svg {
+    transition: .2s ease-in-out;
+  }
+  &:hover {
+    svg {
+      transform: translateX(-5px);
+    }
+  }
+}
