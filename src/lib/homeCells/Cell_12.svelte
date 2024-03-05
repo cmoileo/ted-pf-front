@@ -4,7 +4,7 @@
     import {api_url} from "$lib/publicConsts.ts";
     export let data: HomeDataType
     const projet = data.projet[1]
-    const projectSlug = slugify(projet.Titre)
+    const projectSlug = slugify(projet.slug)
 </script>
 
 <div class="cell-12 main-radius relative has-link-arrow">

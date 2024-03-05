@@ -60,6 +60,7 @@ export interface HomeDataType {
     publishedAt: string;
     Label_projets: string;
     Titre_projets: string;
+    slug: string;
     Outils: {
         id: number;
         Label: string;
