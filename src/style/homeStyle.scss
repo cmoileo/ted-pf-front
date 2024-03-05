@@ -1,8 +1,20 @@
 .home {
+  @include max(desktop) {
+    margin-top: ptr(25, mobile);
+  }
   > h1 {
+    @include min(mobile) {
+      margin-top: ptr(10, mobile);
+      margin-bottom: ptr(15, mobile);
+    }
     @include min(desktop) {
       margin-top: ptr(10, desktop);
       margin-bottom: ptr(65, desktop);
+    }
+  }
+  .right {
+    @include max(desktop) {
+      position: relative;
     }
   }
 }
@@ -21,7 +33,11 @@
   }
   .top, .container {
     display: flex;
-    gap: ptr(16, desktop)
+    gap: ptr(16, desktop);
+
+    @include max(desktop) {
+      flex-direction: column;
+    }
   }
   .top {
     .left, .right {
@@ -31,6 +47,9 @@
     }
   }
   .bottom {
+    @include max(desktop) {
+      flex-direction: column;
+    }
     display: flex;
     gap: ptr(16, desktop);
   }
@@ -38,6 +57,10 @@
 
 .home-grid-c {
   .cell-1 {
+    @include max(desktop) {
+      width: 100%;
+      height: ptr(300, mobile);
+    }
     @include min(desktop) {
       width: ptr(632, desktop);
       height: ptr(502, desktop);
@@ -55,56 +78,65 @@
     }
   }
   .cell-2 {
-    @include min(desktop) {
-      width: ptr(632, desktop);
-      height: ptr(450, desktop);
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
+    width: ptr(632, desktop);
+    height: ptr(450, desktop);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 
-      .images-c {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        width: -webkit-fill-available;
-        padding: 0 ptr(32, desktop) ptr(43, desktop) ptr(32, desktop);
-        height: 70%;
-        row-gap: 10px;
-        .img-c {
-          position: relative;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          height: 100%;
-          .noise {
-            width: 100%;
+    @include max(desktop) {
+      width: 100%;
+      height: ptr(225, mobile);
+    }
+
+    .images-c {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      width: -webkit-fill-available;
+      padding: 0 ptr(32, desktop) ptr(43, desktop) ptr(32, desktop);
+      height: 70%;
+      row-gap: 10px;
+      .img-c {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        .noise {
+          width: 100%;
+        }
+        > div {
+          width: fit-content;
+          height: fit-content;
+          z-index: 1;
+          padding: 20%;
+          background: linear-gradient($grey-950, $grey-950) padding-box, linear-gradient(133deg, $grey_600, transparent, transparent) border-box;
+          border: 1px solid transparent;
+          .blured {
+            filter: blur(20px);
+            min-width: 45%;
+            min-height: 45%;
+            animation: pulse 2s infinite;
           }
-          > div {
-            width: fit-content;
-            height: fit-content;
-            z-index: 1;
-            padding: 20%;
-            background: linear-gradient($grey-950, $grey-950) padding-box, linear-gradient(133deg, $grey_600, transparent, transparent) border-box;
-            border: 1px solid transparent;
-            .blured {
-              filter: blur(20px);
-              min-width: 45%;
-              min-height: 45%;
-              animation: pulse 2s infinite;
+          &::after {
+            content: "";
+            position: absolute;
+            height: auto;
+            aspect-ratio: 1 / 1;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 40%;
+            z-index: -1;
+            @include max(desktop) {
+              border-radius: ptr(8, mobile);
             }
-            &::after {
-              content: "";
-              position: absolute;
-              height: auto;
-              aspect-ratio: 1 / 1;
-              top: 50%;
-              left: 50%;
-              transform: translate(-50%, -50%);
+            @include min(desktop) {
               border-radius: ptr(16, desktop);
-              padding: 40%;
-              z-index: -1;
             }
           }
         }
+      }
         .img-c:nth-child(5) {
           margin-top: ptr(-18, desktop)
         }
@@ -112,7 +144,6 @@
           margin-top: ptr(-14, desktop)
         }
       }
-    }
   }
   .cell-3 {
     display: grid;
@@ -232,6 +263,13 @@
     }
   }
   .cell-4 {
+    @include max(desktop) {
+      .txt-section-padding {
+        p, h2 {
+          text-align: center;
+        }
+      }
+    }
     @include min(desktop) {
       width: ptr(395, desktop);
       height: ptr(247, desktop);
@@ -241,7 +279,6 @@
     }
     .btn {
       display: block;
-      padding: ptr(17, desktop) 0;
       width: calc(100% - ptr(32, desktop) * 2);
       margin: 0 auto ptr(40, desktop) auto;
       text-align: center;
@@ -249,6 +286,13 @@
       cursor: pointer;
       z-index: 2;
       overflow: hidden;
+      @include max(desktop) {
+        padding: ptr(8, mobile) 0;
+        margin-top: ptr(10, mobile)
+      }
+      @include min(desktop) {
+        padding: ptr(17, desktop) 0;
+      }
 
       video {
         min-width: 100%;
@@ -265,12 +309,23 @@
     }
   }
   .cell-5 {
+    @include max(desktop) {
+      width: 100%;
+      height: ptr(150, mobile);
+    }
     @include min(desktop) {
       width: ptr(221, desktop);
       height: ptr(247, desktop);
     }
+    img {
+      object-fit: cover;
+    }
   }
   .cell-6 {
+    @include max(desktop) {
+      width: 100%;
+      height: ptr(200, mobile);
+    }
     @include min(desktop) {
       width: ptr(632, desktop);
       height: ptr(364, desktop);
@@ -286,7 +341,12 @@
       width: 100%;
       z-index: 2;
       height: calc(100% + 1px);
-      border-radius: ptr(32, desktop);
+      @include max(desktop) {
+        border-radius: ptr(12, mobile);
+      }
+      @include min(desktop) {
+        border-radius: ptr(32, desktop);
+      }
       background: linear-gradient(290deg, rgba(33,39,19,1) 0%, rgba(14,14,14,0) 0%, rgba(14,14,14,0.6545211834733893) 55%, rgba(21,21,21,1) 100%);
     }
   }
@@ -298,6 +358,11 @@
     }
     .txt-c {
       z-index: 3;
+      @include max(desktop) {
+        bottom: ptr(8, mobile);
+        left: ptr(8, mobile);
+        position: absolute;
+      }
     }
     .images-c {
       height: 100%;
@@ -316,6 +381,10 @@
     }
   }
   .cell-8 {
+    @include max(desktop) {
+      width: 100%;
+      height: ptr(260, mobile);
+    }
     @include min(desktop) {
       width: ptr(308, desktop);
       height: ptr(470, desktop);
@@ -376,12 +445,20 @@
     }
   }
   .cell-9 {
+    @include max(desktop) {
+      width: 100%;
+      height: ptr(150, mobile);
+    }
     @include min(desktop) {
       width: ptr(308, desktop);
       height: ptr(470, desktop);
     }
   }
   .cell-10 {
+    @include max(desktop) {
+      width: 100%;
+      height: ptr(200, mobile);
+    }
     @include min(desktop) {
       width: ptr(308, desktop);
       height: ptr(367, desktop);
@@ -395,6 +472,10 @@
   }
   .cell-11 {
     overflow: hidden;
+    @include max(desktop) {
+      width: 100%;
+      height: ptr(300, mobile);
+    }
     @include min(desktop) {
       width: ptr(632, desktop);
       height: ptr(1096, desktop);
@@ -415,6 +496,15 @@
   }
   .cell-12 {
     overflow: hidden;
+    @include max(desktop) {
+      width: 100%;
+      height: ptr(250, mobile);
+
+      .mockup {
+        object-fit: cover;
+        bottom: -10%;
+      }
+    }
     @include min(desktop) {
       width: ptr(858, desktop);
       height: ptr(568, desktop);
@@ -430,6 +520,11 @@
     }
   }
   .cell-13 {
+    @include max(desktop) {
+      width: 100%;
+      height: ptr(250, mobile);
+      padding-bottom: ptr(20, mobile)
+    }
     @include min(desktop) {
       width: ptr(406, desktop);
       height: ptr(568, desktop);
@@ -446,16 +541,32 @@
       position: relative;
       gap: ptr(8, desktop);
       .flex input {
-        width: ptr(165, desktop)
+        @include max(desktop) {
+          width: 100%;
+        }
+        @include min(desktop) {
+          width: ptr(165, desktop)
+        }
       }
       textarea {
-        height: ptr(230, desktop);
+        @include max(desktop) {
+          height: ptr(100, mobile);
+        }
+        @include min(desktop) {
+          height: ptr(230, desktop);
+        }
         resize: none;
       }
       button {
         position: absolute;
-        bottom: ptr(16, desktop);
-        right: ptr(16, desktop);
+        @include max(desktop) {
+          bottom: ptr(8, mobile);
+          right: ptr(8, mobile);
+        }
+        @include min(desktop) {
+          bottom: ptr(16, desktop);
+          right: ptr(16, desktop);
+        }
       }
     }
 

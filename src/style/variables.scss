@@ -196,16 +196,26 @@ $grey_1000: #0E0E0E;
 // ========================================================================== \\
 
 .main-radius {
+    @include max(desktop) {
+        border-radius: ptr(16, mobile);
+    }
     @include min(desktop) {
         border-radius: ptr(32, desktop);
     }
 }
 .secondary-radius {
+    @include max(desktop) {
+        border-radius: ptr(8, mobile);
+    }
     @include min(desktop) {
         border-radius: ptr(16, desktop);
     }
 }
 .side-margin {
+    @include max(desktop) {
+        margin-left: ptr(20, mobile);
+        margin-right: ptr(20, mobile);
+    }
     @include min(desktop) {
         margin-left: ptr(80, desktop);
         margin-right: ptr(80, desktop);
@@ -227,6 +237,14 @@ $grey_1000: #0E0E0E;
     z-index: -1;
 }
 .txt-section-padding {
+    @include max(desktop) {
+        padding-top: ptr(16, mobile);
+        padding-left: ptr(8, mobile);
+
+        h2 {
+            margin-top: ptr(4, mobile);
+        }
+    }
     @include min(desktop) {
         padding-top: ptr(40, desktop);
         padding-left: ptr(32, desktop);
