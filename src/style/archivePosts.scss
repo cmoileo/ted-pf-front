@@ -1,6 +1,21 @@
 .archive-projects {
   .cells-c {
     margin-top: ptr(65, desktop);
+    .container {
+      @include max(desktop) {
+        flex-direction: column;
+        gap: ptr(8, mobile);
+
+        article {
+          width: 100%;
+          height: 200px;
+          border-radius: ptr(12, mobile);
+        }
+        article, a, img, a::after {
+          border-radius: ptr(12, mobile);
+        }
+      }
+    }
     article {
       position: relative;
       border-radius: ptr(32, desktop);

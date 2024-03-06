@@ -398,7 +398,7 @@
   .cell-8 {
     @include max(desktop) {
       width: 100%;
-      height: ptr(320, mobile);
+      height: ptr(380, mobile);
     }
     @include min(desktop) {
       width: ptr(308, desktop);

@@ -4,6 +4,9 @@
 
   > article {
     .project-header {
+      @include max(desktop) {
+        margin-top: ptr(15, mobile)
+      }
       h2 {
         margin-top: ptr(8, desktop)
       }
@@ -15,6 +18,12 @@
       margin-top: ptr(64, desktop);
       display: flex;
       gap: ptr(40, desktop);
+
+      @include max(desktop) {
+        flex-direction: column;
+        gap: ptr(30, mobile);
+        margin-top: ptr(40, mobile);
+      }
 
       aside {
         min-width: ptr(663, desktop);
@@ -29,6 +38,10 @@
           z-index: 9;
           width: calc(100% - ptr(160, desktop));
           height: calc(100% - ptr(160, desktop));
+
+          @include max(desktop) {
+            height: 30vh;
+          }
 
           img {
             height: 100%;
@@ -50,14 +63,22 @@
         .article-infos {
           display: flex;
           flex-direction: column;
-          gap: ptr(12, desktop);
           margin-bottom: ptr(32, desktop);
+          @include max(desktop) {
+            gap: ptr(12, mobile);
+          }
+          @include min(desktop) {
+            gap: ptr(12, desktop);
+          }
         }
 
         .article-body {
           display: flex;
           flex-direction: column;
-          gap: ptr(32, desktop)
+          gap: ptr(32, desktop);
+          @include max(desktop) {
+            margin-top: ptr(16, mobile);
+          }
         }
       }
     }

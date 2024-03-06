@@ -24,6 +24,9 @@
 .h1 {
     font-family: 'Main bold', sans-serif;
     text-shadow: 0px 0px 20px rgba(193,193,193,0.2);
+    @include max(desktop) {
+        font-size: ptr(28, mobile);
+    }
     @include min(desktop) {
         font-size: ptr(48, desktop);
     }
@@ -31,6 +34,9 @@
 .h1-l {
     font-family: 'Main bold', sans-serif;
     text-shadow: 0px 0px 20px rgba(193,193,193,0.2);
+    @include max(desktop) {
+        font-size: ptr(28, mobile);
+    }
     @include min(desktop) {
         font-size: ptr(64, desktop);
     }
@@ -38,18 +44,27 @@
 .h2 {
     font-family: 'Main bold', sans-serif;
     text-shadow: 0px 0px 20px rgba(193,193,193,0.2);
+    @include max(desktop) {
+        font-size: ptr(24, mobile);
+    }
     @include min(desktop) {
         font-size: ptr(40, desktop);
     }
 }
 .h3 {
     font-family: 'Main Medium', sans-serif;
+    @include max(desktop) {
+        font-size: ptr(22, mobile);
+    }
     @include min(desktop) {
         font-size: ptr(30, desktop);
     }
 }
 .h4 {
     font-family: 'Main Bold', sans-serif;
+    @include max(desktop) {
+        font-size: ptr(20, mobile);
+    }
     @include min(desktop) {
         font-size: ptr(24, desktop);
     }
